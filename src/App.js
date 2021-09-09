@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
 
+import React,{useState,useEffect} from 'react';
+import './App.css';
+import Profile from './components/Profile';
+import {Switch,Route,Link} from 'react-router-dom';
+import DetailPage from './components/DetailPage'
 function App() {
+//Setup thedifferent routes for the profile and the details page using react-router-dom
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route  exact path="/">
+           <Profile/>
+        </Route>
+        <Route path="/details/:login">
+           <DetailPage/>
+        </Route>
+    </Switch>
   );
 }
 
