@@ -1,3 +1,9 @@
+#Running Application
+Download code, run the command yarn add . and from there it will install all the dfependancies and from there you'll type yarn start to start the project
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
